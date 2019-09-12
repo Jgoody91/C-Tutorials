@@ -1,0 +1,72 @@
+//The String.Split method creates an array of substrings by splitting the input string based on one or more delimiters.
+// It is often the easiest way to separate a string on word boundaries. 
+
+string phrase = "The quick brown fox jumps over the lazy dog.";
+string[] words = phrase.Split(' ');
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+
+//Result is 
+
+//<The>
+//<quick>
+//<brown>
+//<fox>
+//<jumps>
+//<over>
+//<the>
+//<lazy>
+//<dog.>
+
+//Acknowedges spaces
+string phrase = "The quick brown    fox     jumps over the lazy dog.";
+string[] words = phrase.Split(' ');
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+
+//Ignores characters
+char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+
+string text = "one\ttwo three:four,five six seven";
+System.Console.WriteLine($"Original text: '{text}'");
+
+string[] words = text.Split(delimiterChars);
+System.Console.WriteLine($"{words.Length} words in text:");
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+
+char[] delimiterChars = { ' ', ',', '.', ':', '\t' };
+
+string text = "one\ttwo :,five six seven";
+System.Console.WriteLine($"Original text: '{text}'");
+
+string[] words = text.Split(delimiterChars);
+System.Console.WriteLine($"{words.Length} words in text:");
+
+foreach (var word in words)
+{
+    System.Console.WriteLine($"<{word}>");
+}
+
+//Split string
+string[] separatingStrings = { "<<", "..." };
+
+string text = "one<<two......three<four";
+System.Console.WriteLine($"Original text: '{text}'");
+
+string[] words = text.Split(separatingStrings, System.StringSplitOptions.RemoveEmptyEntries);
+System.Console.WriteLine($"{words.Length} substrings in text:");
+
+foreach (var word in words)
+{
+    System.Console.WriteLine(word);
+}
