@@ -1,0 +1,83 @@
+//if statements is true(this is the true branch)
+int a = 5;
+int b = 6;
+if (a + b > 10){
+    Console.WriteLine("The answer is greater than 10.");
+}
+//Modified if statement is not true creates error 
+int a = 5;
+int b = ;
+if (a + b > 10){
+    Console.WriteLine("The answer is greater than 10.");
+  }  
+//To execute different code in both the true and false branches, you create an else branch that executes when the condition is false. 
+int a = 5;
+int b = 3;
+if (a + b > 10){
+    Console.WriteLine("The answer is greater than 10");
+    }
+else{
+    Console.WriteLine("The answer is not greater than 10");
+    }
+    
+// If & Else Statements that are more Complicated 
+int a = 5;
+int b = 3;
+int c = 4;
+if ((a + b + c > 10) && (a == b))
+{
+    Console.WriteLine("The answer is greater than 10");
+    Console.WriteLine("And the first number is equal to the second");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+    Console.WriteLine("Or the first number is not equal to the second");
+}
+//The == symbol tests for equality. Using == distinguishes the test for equality from assignment
+//The && represents "and". It means both conditions must be true to execute the statement in the true branch
+//You can also use || to represent "or"
+
+int a = 5;
+int b = 3;
+int c = 4;
+if ((a + b + c > 10) || (a == b))
+{
+    Console.WriteLine("The answer is greater than 10");
+    Console.WriteLine("Or the first number is equal to the second");
+}
+else
+{
+    Console.WriteLine("The answer is not greater than 10");
+    Console.WriteLine("And the first number is not equal to the second");
+}
+
+//Loops
+int counter = 0;
+while (counter < 10)
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+  counter++;
+}
+
+//The while statement checks a condition and executes the statement following the while
+//The ++ after the counter variable is the increment operator.
+//It adds 1 to the value of counter, and stores that value in the counter variable.
+
+//The do ... while loop executes the code first, and then checks the condition.
+int counter = 0;
+do
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+  counter++;
+} while (counter < 10);
+
+//For Loops
+//The first part is the for initializer: int counter = 0; declares that counter is the loop variable, and sets its initial value to 0.
+//The middle part is the for condition: counter < 10 declares that this for loop continues to execute as long as the value of counter is less than 10.
+//The final part is the for iterator: counter++ specifies how to modify the loop variable after executing the block following the for statement. 
+
+for(int counter = 0; counter < 10; counter++)
+{
+  Console.WriteLine($"Hello World! The counter is {counter}");
+}
